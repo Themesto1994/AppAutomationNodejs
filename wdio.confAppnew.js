@@ -27,8 +27,12 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user:'tabishiqbal',
-    key: '0b7B8iAUACsU6AHEaNHH5cPR37mP9odCsyDIhftzwXIB6MRCRg',
+    user:'sreenadhb',
+    key: 'I304plaCpBxpERvH5roJ6vFuWqLf4lokSJv2Bb1JvgIF0pjqbH',
+
+    // sessionNameFormat : "capabilities",
+    // sessionNameOmitTestTitle : true,
+    
     //
     // If you run your tests on Sauce Labs you can specify the region you want to run your tests
     // in via the `region` property. Available short handles for regions are `us` (default), `eu` and `apac`.
@@ -52,7 +56,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/proverbial.js'
+        './test/specs/**/proverbial*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -86,53 +90,19 @@ exports.config = {
           "lt:options": {
             deviceName: "Galaxy.*",
             platformName: "Android",
-            name: "test",
+            // name: "test",
             isRealMobile: true,
             appiumVersion:"2.0.0",
             w3c: true,
             // app:"lt://APP10160352241718716616084652", //passion
-            app:"lt://APP10160522181731401219211323", //Proverbial
+            app:"lt://APP10160371781728284479821931", //Proverbial
             // 'settings[waitForIdleTimeout]': 0, // To decrese the time taken to execute commands in case you are seeing that 
           //   playStoreLogin: {
           //     "email": "lambdasample@gmail.com",
           //     "password": "@sample123"
           // }
           }
-        },
-        {
-          "lt:options": {
-            deviceName: "Pixel.*",
-            platformName: "Android",
-            name: "test",
-            isRealMobile: true,
-            appiumVersion:"2.0.0",
-            w3c: true,
-            // app:"lt://APP10160352241718716616084652", //passion
-            app:"lt://APP10160522181731401219211323", //Proverbial
-            // 'settings[waitForIdleTimeout]': 0, // To decrese the time taken to execute commands in case you are seeing that 
-          //   playStoreLogin: {
-          //     "email": "lambdasample@gmail.com",
-          //     "password": "@sample123"
-          // }
-          }
-        },
-        {
-          "lt:options": {
-            deviceName: "Galaxy.*",
-            platformName: "Android",
-            name: "test",
-            isRealMobile: true,
-            appiumVersion:"2.0.0",
-            w3c: true,
-            // app:"lt://APP10160352241718716616084652", //passion
-            app:"lt://APP10160522181731401219211323", //Proverbial
-            // 'settings[waitForIdleTimeout]': 0, // To decrese the time taken to execute commands in case you are seeing that 
-          //   playStoreLogin: {
-          //     "email": "lambdasample@gmail.com",
-          //     "password": "@sample123"
-          // }
-          }
-        },
+        }, 
       ],
     //
     // ===================
@@ -182,6 +152,8 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['lambdatest'],
+    // sessionNameOmitTestTitlen  : true,
+    // setSessionName : false,
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -352,5 +324,5 @@ exports.config = {
     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
-    // product:'appAutomation'
+    product:'appAutomation'
 }

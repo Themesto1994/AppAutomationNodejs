@@ -9,45 +9,41 @@ exports.config = {
     ],
     exclude: [],
     maxInstances: 10,
-    // commonCapabilities: {
-    //   name: 'Parallel Sample Test',
-    //   build: 'WebDriver Sample test',
-    // },
     capabilities: [{
-        browserName: 'chrome',
-        version: 'latest',
-        platform: 'WIN10',
-        enableNetworkThrottling: true,
-      },{
-        path: "/wd/hub",
+
         hostname: "mobile-hub.lambdatest.com",
         port: 80,
-        isRealMobile: true,
-        deviceName: 'galaxy.*',
-        platformName: 'Android',
-      }  
-  ],
+        "LT:Options": {
+        build: 'Webdriverio android Browser ',
+        name: "sample",
+        "platform" : "Android",
+        "deviceName" : "pixel.*",
+        "isRealMobile" : true,
+
+            
+        }
+    
+      }],
     services: [
             ['lambdatest', {
                 tunnel: false
             }]
         ],
-
-    // product: 'appAutomation',
    
     screenshotPath: './errorShots/',
     baseUrl: '',
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
-    connectionRetryCount: 3,
-    // host: 'mobile-hub.lambdatest.com',x
-    // port:80,
+    connectionRetryCount: 0,
+    
+    host: 'mobile-hub.lambdatest.com',
+    port:80,
     
     framework: 'mocha',
     mochaOpts: {
         ui: 'bdd'
     }
   
-  
+
   
   }

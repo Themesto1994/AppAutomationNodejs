@@ -10,7 +10,7 @@ describe('Lambdatest Demo Test', function() {
   //     uploadThroughput: 200 * 1024 / 8,
   //     latency: 20
   // })
-  await browser.execute('lambda-throttle-network','Regular 4G');
+  await browser.execute('lambda-throttle-network','Regular 4G'); // comment this if you are running tests in mobile browser
     
     const firstElement = await browser.$('*[name="li1"]');
     await firstElement.click();

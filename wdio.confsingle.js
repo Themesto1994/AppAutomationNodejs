@@ -1,6 +1,6 @@
 exports.config = {
-    user: process.env.LT_USERNAME || 'YOUR LAMBDATEST USERNAME',
-    key: process.env.LT_ACCESS_KEY || 'YOUR LAMBDATEST ACCESS KEY',
+    user: process.env.LT_USERNAME || 'sreenadhb',
+    key: process.env.LT_ACCESS_KEY || 'I304plaCpBxpERvH5roJ6vFuWqLf4lokSJv2Bb1JvgIF0pjqbH',
     
   
     updateJob: false,
@@ -9,17 +9,23 @@ exports.config = {
     ],
     exclude: [],
     maxInstances: 10,
+
     capabilities: [{
-        browserName: 'Edge',
+        
+        browserName: 'chrome',
         version: 'latest',
         platform: 'WIN10',
         enableNetworkThrottling: true,
-        build: process.env.BUILD_NAME
+        build: "Webdriverio Browser"
        
       }],
     services: [
             ['lambdatest', {
-                tunnel: false
+                tunnel: false,
+                // lambdatestOpts: {
+                //     mitm:true,
+
+                // }
             }]
         ],
    
@@ -27,9 +33,10 @@ exports.config = {
     baseUrl: '',
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
-    connectionRetryCount: 3,
-    host: 'hub.lambdatest.com',
-    port:80,
+    connectionRetryCount: 0,
+    
+    // host: 'mobile-hub.lambdatest.com',
+    // port:80,
     
     framework: 'mocha',
     mochaOpts: {
