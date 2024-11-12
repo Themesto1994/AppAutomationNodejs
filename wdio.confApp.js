@@ -27,8 +27,8 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user:'tabishiqbal',
-    key: '0b7B8iAUACsU6AHEaNHH5cPR37mP9odCsyDIhftzwXIB6MRCRg',
+    user:'username',
+    key: 'accesskey',
     //
     // If you run your tests on Sauce Labs you can specify the region you want to run your tests
     // in via the `region` property. Available short handles for regions are `us` (default), `eu` and `apac`.
