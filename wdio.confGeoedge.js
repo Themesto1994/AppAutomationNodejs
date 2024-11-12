@@ -28,8 +28,8 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user:'sreenadhb',
-    key: 'I304plaCpBxpERvH5roJ6vFuWqLf4lokSJv2Bb1JvgIF0pjqbH',
+    user:'username',
+    key: 'accesskey',
 
     // sessionNameFormat : "capabilities",
     // sessionNameOmitTestTitle : true,
